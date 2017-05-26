@@ -10,8 +10,8 @@ import torch.optim as optim
 from torch.autograd import Variable
 
 # Data params
-data_mean = 4
-data_stddev = 1.25
+data_mean = 4 #高斯均值
+data_stddev = 1.25  #高斯标准差
 
 # Model params
 g_input_size = 1     # Random noise dimension coming into generator, per output vector
@@ -24,7 +24,7 @@ minibatch_size = d_input_size
 
 d_learning_rate = 2e-4  # 2e-4
 g_learning_rate = 2e-4
-optim_betas = (0.9, 0.999)
+optim_betas = (0.9, 0.999) #？？？？
 num_epochs = 30000
 print_interval = 200
 d_steps = 1  # 'k' steps in the original GAN paper. Can put the discriminator on higher training freq than generator
